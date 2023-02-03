@@ -14,13 +14,13 @@ function! showmotion#CleanWordMotion() abort
     let l:to_delete = s:big_id
     let s:big_id = 0
     call matchdelete(l:to_delete)
-    set nocursorcolumn
+    " set nocursorcolumn
   end
   if s:small_id
     let l:to_delete = s:small_id
     let s:small_id = 0
     call matchdelete(l:to_delete)
-    set nocursorcolumn
+    " set nocursorcolumn
   end
 endfunction
 " }}}
@@ -162,7 +162,7 @@ function! showmotion#CleanCharMotion() abort
   if s:c_id
     call matchdelete(s:c_id)
     let s:c_id = 0
-    set nocursorcolumn
+    " set nocursorcolumn
   end
 endfunction
 
